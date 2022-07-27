@@ -1,6 +1,16 @@
 let op;
 let suma = 0;
+let nombre;
 let lista = "Productos seleccionados:"
+function ingresarNombre(){
+    nombre = prompt("Ingresa tu nombre: ");
+    alert("Hola " + nombre + " bienvenido");
+}
+function mostrarCarrito(){
+    alert(nombre + ", este es tu carrito \n" + lista + "\n" + "El total de tus productos es: " + suma);
+}
+
+ingresarNombre();
 do{
     let num = Number(prompt('Elige un producto por su número: 1.Monitor 2.Mouse 3.Teclado 4.Impresora 5.Cámara fotográfica'));
     switch(num){
@@ -60,5 +70,4 @@ do{
     }
     op = Number(prompt('Quieres revisar otro producto? 1.SI 2.NO'));
 }while (op == 1);
-
-alert(lista + "\nEl total de los productos seleccionados es: " + suma);
+ mostrarCarrito();
